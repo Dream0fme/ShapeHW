@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -13,11 +14,13 @@ public class Main {
         System.out.println("Площадь круга = " + circle.area());
         Shape[] shapes = {rect, square, circle};
         Arrays.sort(shapes);
-        System.out.println(findBiggestArea(shapes));
-
+        System.out.println("Самая большая площадь = " + Math.round(findBiggestArea(shapes) * 100d) / 100d);
+        double areaValue = findBiggestArea(shapes);
     }
+
     public static double findBiggestArea(final Shape[] s) {
         double tmp = s[0].area();
+
         for (int i = 1; i < s.length; i++) {
             if (s[i].area() > tmp) tmp = s[i].area();
         }
