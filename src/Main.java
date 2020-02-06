@@ -15,7 +15,6 @@ public class Main {
         Shape[] shapes = {rect, square, circle};
         Arrays.sort(shapes);
         System.out.println("Самая большая площадь = " + Math.round(findBiggestArea(shapes) * 100d) / 100d);
-        double areaValue = findBiggestArea(shapes);
     }
 
     public static double findBiggestArea(final Shape[] s) {
